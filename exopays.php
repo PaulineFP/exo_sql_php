@@ -42,7 +42,8 @@ $pays = $pdoStat->fetchAll();
     <input type="submit"> </input>
 
 </form>
-
+</body>
+</html>
 <?php
 
 $pays = $_GET['pays'];
@@ -52,31 +53,39 @@ var_dump($pays);
 
 /*récupérer dans la BDD le nom du pays associé à la $ville envoyée
 stocker dans une variable le nom du $pays
-afficher une phrase avec le nom de la ville + le nom du pays*/
+afficher une phrase avec le nom de la ville + le nom du pays
 
-/*1. si il y a quelque chose dans la varible entre parentese alors execute l'action de l'accolade*/
+1. si il y a quelque chose dans la varible entre parentese alors execute l'action de l'accolade
 
 
 
-/*C EST UNE HISTOIRE DE BOUCLE JUSTE TROUVER OU L ARRETER*/
+C EST UNE HISTOIRE DE BOUCLE JUSTE TROUVER OU L ARRETER
 
-/*tu lui demande de te sortir que la valeur d une seule colonne je dirai c est la correspondance qui va pas*/
+tu lui demande de te sortir que la valeur d une seule colonne je dirai c est la correspondance qui va pas
 
-/*oui je pense que c,'est la même boucle qu'hier mais au lieu de définir 
+oui je pense que c,'est la même boucle qu'hier mais au lieu de définir 
 chaque condition à la main et écrire un echo il faut y coller des requêtes sql pour que ça ailler chercher 
 le bon élément dans la base de données*/ 
 
-if (isset($_GET['pays']) /*&& $pays == 'capitale'*/){ 
+if (isset($_GET['pays'])){ 
    
-    $reponse = $pdo->query("SELECT capitale, pays FROM exo_pays WHERE capitale = 'pays'");}
+    $reponse = $pdo->prepare("SELECT capitale, pays FROM exo_pays WHERE  capitale <capitale AND pays = :pays") ;
 
-    while ($donnees = $reponse->fetch())
-    {
-        echo "la capitale de $donnees['pays'] est $donnees['capitale']";
-    }
-    
-    $reponse->closeCursor();
-    
+    $reponse->bindParam(':pays', $pays PDO::PARAM_INT);
+    $reponse->bindParam('capitale', $capitale PDO::PARAM_STR,12);
+    $reponse->execute(); 
+    $reponse->fetch();
+    var_dump($reponse)
+ $reponse->closeCursor();}
+/*alors affiche moi la capitale qui correspond au pays*/
+
+ 
+while ($donnees = $reponse->fetch())
+{
+echo $donnees['capitale'];
+
+$reponse->closeCursor();}
+
     /* boucle de marika permettant de conserver la selection dans le menu :
 
     <option value= "<?php echo $ $item [ville];"
@@ -84,10 +93,6 @@ if (isset($_GET['pays']) /*&& $pays == 'capitale'*/){
     if (isset ($_GET["ville"]) && $ville == $item ["ville"])
     {
         echo "selected";
-    }
- 
-    
-*/
-?>
-</body>
-</html>
+    } */
+
+    ?>
