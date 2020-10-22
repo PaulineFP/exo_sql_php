@@ -46,47 +46,27 @@ $pays = $pdoStat->fetchAll();
 </html>
 <?php
 
-$pays = $_GET['pays'];
-var_dump($pays);
 
-
-
-/*récupérer dans la BDD le nom du pays associé à la $ville envoyée
-stocker dans une variable le nom du $pays
-afficher une phrase avec le nom de la ville + le nom du pays
-
-1. si il y a quelque chose dans la varible entre parentese alors execute l'action de l'accolade
-
-
-
-C EST UNE HISTOIRE DE BOUCLE JUSTE TROUVER OU L ARRETER
-
-tu lui demande de te sortir que la valeur d une seule colonne je dirai c est la correspondance qui va pas
-
-oui je pense que c,'est la même boucle qu'hier mais au lieu de définir 
-chaque condition à la main et écrire un echo il faut y coller des requêtes sql pour que ça ailler chercher 
-le bon élément dans la base de données*/ 
+$pdoStat = $pdo->query ("SELECT * FROM exo_pays");
 
 if (isset($_GET['pays']))
 { 
-    $reponse = $pdo->prepare("SELECT capitale, pays FROM exo_pays WHERE  capitale <capitale AND pays = :pays");
-    var_dump($reponse);
-    $reponse->bindParam("':pays', $pays PDO::PARAM_STR") ;
-    $reponse->bindParam("':capitale', $capitale PDO::PARAM_STR");
-  /*  $req->execute(); 
-    $reponse->fetch();*/
-    var_dump($reponse);
+     // Je recupere le ville qui est dans l'url
+    $pays = $_GET['pays'];
+    // Je créer ma requte SQL
+    $sql = $pdo->prepare("SELECT pays FROM exo_pays WHERE capitale = :capitale");
+    var_dump($pdo);
+     // Je lui passe le param's:
+    // https://www.php.net/manual/fr/pdostatement.bindparam.php
+    $sql->bindParam(":capitale", $pays) ;
+    // j'execute
+    $sql->execute();
+    $contry = $fetch['capitale'];
+    echo "L'$pays a pour capital $country";
+
 }
 
-/*alors affiche moi la capitale qui correspond au pays*/
-
- 
-while ($donnees = $reponse->fetch())
-{
-echo $donnees['capitale'];
-
-$reponse->closeCursor();
-}
+$pays = $pdoStat->fetchAll();
 
     /* boucle de marika permettant de conserver la selection dans le menu :
 
