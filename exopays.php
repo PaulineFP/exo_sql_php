@@ -49,10 +49,16 @@ $pays = $_GET['pays'];
 
 var_dump($pays);
 
+/*récupérer dans la BDD le nom du pays associé à la $ville envoyée
+stocker dans une variable le nom du $pays
+afficher une phrase avec le nom de la ville + le nom du pays*/
+
 /*1. si il y a quelque chose dans la varible entre parentese alors execute l'action de l'accolade*/
 if (isset($_GET['pays'])) { 
 
     $sql ="SELECT pays, capitale FROM exo_pays WHERE pays = $pays";
+    $sql = "INSERT INTO  () VALUES ('$', '$', )";
+    echo = "YES" ;
 
     var_dump($sql);
  
