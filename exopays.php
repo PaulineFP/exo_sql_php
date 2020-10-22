@@ -52,17 +52,26 @@ $pdoStat = $pdo->query ("SELECT * FROM exo_pays");
 if (isset($_GET['pays']))
 { 
      // Je recupere le ville qui est dans l'url
+
     $pays = $_GET['pays'];
+    var_dump($pays);
+
     // Je créer ma requte SQL
-    $sql = $pdo->prepare("SELECT pays FROM exo_pays WHERE capitale = :capitale");
+
+    $sql = $pdo->prepare("SELECT * FROM exo_pays WHERE pays = :pays");
     var_dump($pdo);
+
      // Je lui passe le param's:
     // https://www.php.net/manual/fr/pdostatement.bindparam.php
-    $sql->bindParam(":capitale", $pays) ;
+
+    $sql->bindParam(":pays", $pays) ;
+
     // j'execute
+
     $sql->execute();
-    $contry = $fetch['capitale'];
-    echo "L'$pays a pour capital $country";
+    $fetch= $sql->fetch();
+    $country = $fetch['capitale'];
+    echo "L'$pays a pour capitale $country";
 
 }
 
