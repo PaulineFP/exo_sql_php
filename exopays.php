@@ -67,16 +67,17 @@ oui je pense que c,'est la même boucle qu'hier mais au lieu de définir
 chaque condition à la main et écrire un echo il faut y coller des requêtes sql pour que ça ailler chercher 
 le bon élément dans la base de données*/ 
 
-if (isset($_GET['pays'])){ 
-   
-    $reponse = $pdo->prepare("SELECT capitale, pays FROM exo_pays WHERE  capitale <capitale AND pays = :pays") ;
+if (isset($_GET['pays']))
+{ 
+    $reponse = $pdo->prepare("SELECT capitale, pays FROM exo_pays WHERE  capitale <capitale AND pays = :pays");
+    var_dump($reponse);
+    $reponse->bindParam("':pays', $pays PDO::PARAM_STR") ;
+    $reponse->bindParam("':capitale', $capitale PDO::PARAM_STR");
+  /*  $req->execute(); 
+    $reponse->fetch();*/
+    var_dump($reponse);
+}
 
-    $reponse->bindParam(':pays', $pays PDO::PARAM_INT);
-    $reponse->bindParam('capitale', $capitale PDO::PARAM_STR,12);
-    $reponse->execute(); 
-    $reponse->fetch();
-    var_dump($reponse)
- $reponse->closeCursor();}
 /*alors affiche moi la capitale qui correspond au pays*/
 
  
@@ -84,7 +85,8 @@ while ($donnees = $reponse->fetch())
 {
 echo $donnees['capitale'];
 
-$reponse->closeCursor();}
+$reponse->closeCursor();
+}
 
     /* boucle de marika permettant de conserver la selection dans le menu :
 
@@ -94,5 +96,4 @@ $reponse->closeCursor();}
     {
         echo "selected";
     } */
-
-    ?>
+ ?>
