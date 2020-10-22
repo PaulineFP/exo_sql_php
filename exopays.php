@@ -57,9 +57,12 @@ afficher une phrase avec le nom de la ville + le nom du pays*/
 /*1. si il y a quelque chose dans la varible entre parentese alors execute l'action de l'accolade*/
 
 
-/*if (isset($_GET['pays'])) {*/ 
 
-    $reponse = $pdo->query('SELECT capitale FROM exo_pays');
+/*C EST UNE HISTOIRE DE BOUCLE JUSTE TROUVER OU L ARRETER*/
+
+if (isset($_GET['pays'])) {
+
+    $reponse = $pdo->query('SELECT capitale FROM exo_pays');}
 
     while ($donnees = $reponse->fetch())
     {
@@ -69,62 +72,7 @@ afficher une phrase avec le nom de la ville + le nom du pays*/
     $reponse->closeCursor();
     
     
-    /*$sql ="SELECT 'capitale = $capitale' FROM exo_pays WHERE 'pays' = $pays";
-    var_dump($sql);
-    var_dump('capitale');
-    echo $capitale;
-    $reponse = $pdo->query('SELECT capitale FROM exo_pays');
-    var_dump($pdo);
-    while($donnees = $reponse->fetch('capitale'))
-    {
-    /*$donnees = $reponse->fetch('capitale');
-    var_dump($donnees);
-    echo $donnees['capitale'];
-    /*}*/
-
-    $reponse->closeCursor();
-    /*
-    $sql = "INSERT INTO  () VALUES ('$', '$', )";
     
-
-    var_dump($sql);
- 
-    
-    $sql->execute() ;   
-
-    echo "La capitale de $pays est ";*/
-
-
-
-/*2. Avec la valeur $pays va selectionner dans ma bbd la capitale qui correspond a ce pays
-
-Selectionne l'intituler de la conlone dans le nom de la tabble
-
- $req = $sql->prepare("SELECT 'pays','capitale' FROM exo_pays WHERE pays = $pays");
-
-/*3. alors select capitale de pays -> WHERE Pays== $valuepays 
-
-
- (((ubdate for  exopays.php ..... where user ))))*/ 
-
-
-
-/*
-if ($_GET['pays'] === 'France'){
-    echo "La capitale de la France est Paris";
-
-} elseif ($_GET['pays'] === 'Angleterre'){
-    echo "La capitale de l'Angleterre est Londres";
-
-} elseif ($_GET['pays'] === 'Allemagne'){
-    echo "La capitale de l'Allemagne est Berlin";}
-
-    elseif ($_GET['pays'] === 'Espagne'){
-        echo "La capitale de l'Espagne est Madrid";
-        
-    } else {
-        echo '';
-};*/
 
 
 ?>
