@@ -60,21 +60,34 @@ afficher une phrase avec le nom de la ville + le nom du pays*/
 
 /*C EST UNE HISTOIRE DE BOUCLE JUSTE TROUVER OU L ARRETER*/
 
-if (isset($_GET['pays'])) {
+/*tu lui demande de te sortir que la valeur d une seule colonne je dirai c est la correspondance qui va pas*/
 
-    $reponse = $pdo->query('SELECT capitale FROM exo_pays');}
+/*oui je pense que c,'est la même boucle qu'hier mais au lieu de définir 
+chaque condition à la main et écrire un echo il faut y coller des requêtes sql pour que ça ailler chercher 
+le bon élément dans la base de données*/ 
+
+if (isset($_GET['pays']) /*&& $pays == 'capitale'*/){ 
+   
+    $reponse = $pdo->query("SELECT capitale, pays FROM exo_pays WHERE capitale = 'pays'");}
 
     while ($donnees = $reponse->fetch())
     {
-        echo $donnees['capitale'] . '<br />';
+        echo "la capitale de $donnees['pays'] est $donnees['capitale']";
     }
     
     $reponse->closeCursor();
     
-    
-    
+    /* boucle de marika permettant de conserver la selection dans le menu :
 
+    <option value= "<?php echo $ $item [ville];"
 
+    if (isset ($_GET["ville"]) && $ville == $item ["ville"])
+    {
+        echo "selected";
+    }
+ 
+    
+*/
 ?>
 </body>
 </html>
