@@ -45,6 +45,38 @@ $pays = $pdoStat->fetchAll();
 
 <?php
 
+$pays = $_GET['pays'];
+
+var_dump($pays);
+
+/*1. si il y a quelque chose dans la varible entre parentese alors execute l'action de l'accolade*/
+if (isset($_GET['pays'])) { 
+
+    $sql ="SELECT pays, capitale FROM exo_pays WHERE pays = $pays";
+
+    var_dump($sql);
+ 
+    
+    $sql->execute() ;   
+
+    echo "La capitale de $pays est ";
+}
+
+
+/*2. Avec la valeur $pays va selectionner dans ma bbd la capitale qui correspond a ce pays
+
+Selectionne l'intituler de la conlone dans le nom de la tabble
+
+ $req = $sql->prepare("SELECT 'pays','capitale' FROM exo_pays WHERE pays = $pays");
+
+/*3. alors select capitale de pays -> WHERE Pays== $valuepays 
+
+
+ (((ubdate for  exopays.php ..... where user ))))*/ 
+
+
+
+/*
 if ($_GET['pays'] === 'France'){
     echo "La capitale de la France est Paris";
 
@@ -59,7 +91,9 @@ if ($_GET['pays'] === 'France'){
         
     } else {
         echo '';
-};
+};*/
+
+
 ?>
 </body>
 </html>
