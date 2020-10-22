@@ -46,27 +46,47 @@ $pays = $pdoStat->fetchAll();
 <?php
 
 $pays = $_GET['pays'];
-
 var_dump($pays);
+$capitale = $_Get ['capitale'];
+var_dump($capitale);
+
+
 
 /*récupérer dans la BDD le nom du pays associé à la $ville envoyée
 stocker dans une variable le nom du $pays
 afficher une phrase avec le nom de la ville + le nom du pays*/
 
 /*1. si il y a quelque chose dans la varible entre parentese alors execute l'action de l'accolade*/
-if (isset($_GET['pays'])) { 
 
-    $sql ="SELECT pays, capitale FROM exo_pays WHERE pays = $pays";
+
+/*if (isset($_GET['pays'])) {*/ 
+
+
+    
+    $sql ="SELECT 'capitale' FROM exo_pays WHERE 'pays' = $pays";
+    var_dump($sql);
+    echo $capitale;
+   /* $reponse = $pdo->query('SELECT capitale FROM exo_pays');
+    var_dump($pdo);
+    while($donnees = $reponse->fetch('capitale'))
+    {
+    /*$donnees = $reponse->fetch('capitale');*/
+    var_dump($donnees);
+    echo $donnees['capitale'];
+    /*}*/
+
+    $reponse->closeCursor();
+    /*
     $sql = "INSERT INTO  () VALUES ('$', '$', )";
-    echo = "YES" ;
+    
 
     var_dump($sql);
  
     
     $sql->execute() ;   
 
-    echo "La capitale de $pays est ";
-}
+    echo "La capitale de $pays est ";*/
+
 
 
 /*2. Avec la valeur $pays va selectionner dans ma bbd la capitale qui correspond a ce pays
