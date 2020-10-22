@@ -47,8 +47,6 @@ $pays = $pdoStat->fetchAll();
 
 $pays = $_GET['pays'];
 var_dump($pays);
-$capitale = $_Get ['capitale'];
-var_dump($capitale);
 
 
 
@@ -61,16 +59,25 @@ afficher une phrase avec le nom de la ville + le nom du pays*/
 
 /*if (isset($_GET['pays'])) {*/ 
 
+    $reponse = $pdo->query('SELECT capitale FROM exo_pays');
 
+    while ($donnees = $reponse->fetch())
+    {
+        echo $donnees['capitale'] . '<br />';
+    }
     
-    $sql ="SELECT 'capitale' FROM exo_pays WHERE 'pays' = $pays";
+    $reponse->closeCursor();
+    
+    
+    /*$sql ="SELECT 'capitale = $capitale' FROM exo_pays WHERE 'pays' = $pays";
     var_dump($sql);
+    var_dump('capitale');
     echo $capitale;
-   /* $reponse = $pdo->query('SELECT capitale FROM exo_pays');
+    $reponse = $pdo->query('SELECT capitale FROM exo_pays');
     var_dump($pdo);
     while($donnees = $reponse->fetch('capitale'))
     {
-    /*$donnees = $reponse->fetch('capitale');*/
+    /*$donnees = $reponse->fetch('capitale');
     var_dump($donnees);
     echo $donnees['capitale'];
     /*}*/
