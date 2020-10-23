@@ -54,12 +54,10 @@ if (isset($_GET['pays']))
      // Je recupere le ville qui est dans l'url
 
     $pays = $_GET['pays'];
-    var_dump($pays);
 
     // Je créer ma requte SQL
 
     $sql = $pdo->prepare("SELECT * FROM exo_pays WHERE pays = :pays");
-    var_dump($pdo);
 
      // Je lui passe le param's:
     // https://www.php.net/manual/fr/pdostatement.bindparam.php
