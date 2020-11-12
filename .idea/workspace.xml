@@ -27,6 +27,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2424111e-70cc-4475-83f4-768c5cfd9eb5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExoSql" beforeDir="false" afterPath="$PROJECT_DIR$/ExoSql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExoSql/form/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ExoSql/form/.idea/form.iml" beforeDir="false" />
@@ -67,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605174669379</updated>
       <workItem from="1605174670622" duration="358000" />
-      <workItem from="1605175165908" duration="1226000" />
+      <workItem from="1605175165908" duration="1699000" />
     </task>
     <task id="LOCAL-00001" summary="rectif dossier">
       <created>1605174815476</created>
@@ -115,5 +116,9 @@
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2185" y="88" key="CommitChangelistDialog2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1605174813059" />
+    <state x="2152" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605176230755">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2152" y="253" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1605176230755" />
   </component>
 </project>
