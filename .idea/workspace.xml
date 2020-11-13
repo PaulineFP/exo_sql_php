@@ -6,34 +6,23 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de44ade2-6c6e-418f-9b62-872279bcf57b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/exo_sql/form/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExoSql" beforeDir="false" afterPath="$PROJECT_DIR$/ExoSql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExoSql/form/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExoSql/form/.idea/form.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExoSql/form/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExoSql/form/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExoSql/form/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exo_sql/form/cree.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exo_sql/form/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exo_sql/form/lister.php" beforeDir="false" afterPath="$PROJECT_DIR$/exo_sql/form/lister.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exo_sql/form/supp.php" beforeDir="false" afterPath="$PROJECT_DIR$/exo_sql/form/supp.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +33,19 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1kBfifF76nNd0ldhpsNFg11bHN4" />
@@ -55,14 +57,20 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../formulaire/list.php" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\HTML_CSS cours_exo\exercicephp\exo_sql" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -73,6 +81,8 @@
       <option name="presentableId" value="Default" />
       <updated>1605179041634</updated>
       <workItem from="1605179043712" duration="926000" />
+      <workItem from="1605185340066" duration="9270000" />
+      <workItem from="1605253614095" duration="8302000" />
     </task>
     <task id="LOCAL-00001" summary="rectif dossier">
       <created>1605185279753</created>
@@ -81,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605185279753</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="rectif dossier">
+      <created>1605185530072</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605185530072</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,7 +115,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -109,24 +126,30 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="rectif dossier" />
     <option name="LAST_COMMIT_MESSAGE" value="rectif dossier" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2185" y="107" key="CommitChangelistDialog2" timestamp="1605185279775">
+    <state x="2185" y="107" key="CommitChangelistDialog2" timestamp="1605185527869">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state x="2185" y="107" key="CommitChangelistDialog2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1605185279775" />
-    <state x="2340" y="262" key="FileChooserDialogImpl" timestamp="1605184959930">
-      <screen x="1600" y="0" width="1920" height="1040" />
+    <state x="2185" y="107" key="CommitChangelistDialog2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1605185527869" />
+    <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1605259520282">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1605259520282" />
     <state x="2340" y="262" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1605184959930" />
-    <state x="2152" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605184579840">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1605254250540">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1605254250540" />
+    <state x="2152" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605186146938">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state x="2152" y="253" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1605184579840" />
+    <state x="2152" y="253" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1605186146938" />
     <state x="2337" y="391" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1605184656089">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
