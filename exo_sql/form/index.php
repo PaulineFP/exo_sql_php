@@ -21,7 +21,7 @@ $sql =  "INSERT INTO form (nom_art, ref_art, quantite) VALUE ('$article', '$ref'
 
 $pdo->exec($sql);
 }
-
+// je le lie a mon dossier lister.php uniquement si quelque chose est inscrit dans name.
 if (!empty($_POST['name'])){
     header('location: lister.php');
 }
@@ -49,7 +49,6 @@ if (!empty($_POST['name'])){
            min="0" max="10">
 
     <button type="submit" >Envoyer a la base de donée</button>
-    <a href="lister.php"> aller vers lister</a>
 
 
 </form>
