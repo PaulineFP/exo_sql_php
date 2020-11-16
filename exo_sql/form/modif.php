@@ -1,6 +1,6 @@
 <?php
 //connection à la base de donée
-$pdo = new PDO('mysql:host=mysql;dbname=exo;host=127.0.0.1', 'root', '', [
+$pdo = new PDO('mysql:host=mysql;dbname=exo;host=127.0.0.1', 'root', 'toortoor', [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
 ]);
 
@@ -11,27 +11,34 @@ $ins->execute();
 
 $ins->fetch();
 
-//je met une condition
-
-if(isset($_GET['id']) AND !empty($_GET['id'])) {
 
 
-//je lui indique la référance et son appartenant
+//je met une condition en recupérant mes variables en post
 
-    $id = $_REQUEST['id'];
+if(isset($_POST['name']) && !empty($_POST['name'])
+&& isset($_POST['ref']) && !empty($_POST['ref'])
+&& isset($_POST['quantites']) && !empty($_POST['quantites']))
 
-    $id = intval($id);
+{
 
-//j'indique les valeurs a modifier en reprenant les variable de mon index
+
+//je declare la variable id en fonction de se que j ai récupéré en get
+
+    $id = $_GET["lign_update"];
+
+
+
+
+//j'indique les variable par rapport a ce que j ai recup en post nom,ref,quantites
 
     $article = $_POST['name'];
     $ref = $_POST['ref'];
     $nbr = intval($_POST['quantites']);
 
-//je crée une requette sql pour modifier
+//je crée une requette sql en assignant les nouvelles valeurs dans ma table
 
     $req = $pdo->prepare("UPDATE form SET nom_art ='$article', ref_art = '$ref', quantite ='$nbr'WHERE id ='$id'");
-    var_dump($req);
+
 
 //j'éxecute
 
