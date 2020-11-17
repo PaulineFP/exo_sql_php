@@ -17,12 +17,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de44ade2-6c6e-418f-9b62-872279bcf57b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exo_sql/form/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/exo_sql/form/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exo_sql/form/lister.php" beforeDir="false" afterPath="$PROJECT_DIR$/exo_sql/form/lister.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exo_sql/form/modif.php" beforeDir="false" afterPath="$PROJECT_DIR$/exo_sql/form/modif.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exo_sql/form/supp.php" beforeDir="false" afterPath="$PROJECT_DIR$/exo_sql/form/supp.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +52,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../formulaire/modifier.php" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/exo_sql/petites_annonces" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -84,7 +79,8 @@
       <workItem from="1605185340066" duration="9270000" />
       <workItem from="1605253614095" duration="16632000" />
       <workItem from="1605513048094" duration="3197000" />
-      <workItem from="1605522361552" duration="6257000" />
+      <workItem from="1605522361552" duration="8078000" />
+      <workItem from="1605601800469" duration="147000" />
     </task>
     <task id="LOCAL-00001" summary="rectif dossier">
       <created>1605185279753</created>
@@ -139,10 +135,10 @@
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2185" y="107" key="CommitChangelistDialog2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1605185527869" />
-    <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1605273482250">
+    <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1605601943548">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1605273482250" />
+    <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1605601943548" />
     <state x="2340" y="262" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1605184959930" />
     <state x="634" y="353" key="NewPhpFileDialog" timestamp="1605520664727">
       <screen x="0" y="0" width="1600" height="860" />
