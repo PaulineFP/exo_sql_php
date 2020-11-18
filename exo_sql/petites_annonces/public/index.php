@@ -1,29 +1,22 @@
 <?php
+use App\Router;
+
+define('DEBUG_TIME', microtime(true));
+
+$whoops = new \Whoops\Run;
+$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+$whoops->register();
 
 //je charge le dossier d'autolaoding de composer: je remonte 2 crans en arriere, je vais dans le dossier vendor
 // et je vais chercher le fichier autoload.php
 
 require '../vendor/autoload.php';
 
-//je démarre mon router
+//ma constante, je lui indique ce qu il doit chercher  dans le dossier courant '/view' et les actions a effectuer.
 
-$router = new AltoRouter();
-
-//ma constante, je lui donne les parametre de ma constante -> VIEW_PATH et je lui donne la valeur-> dossier courant.
-
-define('VIEW_PATH', dirname(__DIR__) . '/views');
-
-
-$router->map('GET','/projet', function () {
- require VIEW_PATH . '/post/index.php';
-});
-
-$router->map('GET','/projet/category', function () {
-    require VIEW_PATH . '/category/show.php';
-});
-
-//je verifie si l'url correspond a une de ces routes
-
-$match = $router->match();
-//je recupere la fonction
-$match['target']();
+$router = new Router(dirname(__DIR__) . '/views');
+$router
+    ->get('/projet', 'post/index', 'projet')
+    ->get('/projet/category', 'category/show', 'category')
+    ->run();
+?>

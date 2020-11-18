@@ -29,7 +29,10 @@ Création de la strucure:
 https://www.grafikart.fr/tutoriels/structure-tp-php-1162
 
 ---------------------
+Le routeur:
+https://www.grafikart.fr/tutoriels/routeur-php-1163
 
+----------------------
 
 
 */
