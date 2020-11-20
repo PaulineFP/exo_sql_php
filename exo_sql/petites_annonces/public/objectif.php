@@ -34,6 +34,10 @@ https://www.grafikart.fr/tutoriels/routeur-php-1163
 
 ----------------------
 
+Remplir la base de donnée:
+https://www.grafikart.fr/tutoriels/bdd-faker-php-1164
+
+-----------------------
 
 */
 
