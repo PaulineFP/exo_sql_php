@@ -39,6 +39,11 @@ https://www.grafikart.fr/tutoriels/bdd-faker-php-1164
 
 -----------------------
 
+Listing d'articles:
+https://www.grafikart.fr/tutoriels/tp-php-listing-article-1165
+
+------------------------
+
 */
 
 ?>

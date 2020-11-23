@@ -26,6 +26,10 @@ class Router{
         return $this;
     }
 
+    public function url (string $name, array $params =[])
+    {
+        return $this->router->generate($name, $params);
+    }
 //je verifie si l'url correspond a une de ces routes
 
     public function run(): self
@@ -33,11 +37,11 @@ class Router{
        $match = $this->router->match();
         //je recupere la fonction tamplate
        $view = $match['target'];
+       $router = $this;
        ob_start();
        require $this->viewPath . DIRECTORY_SEPARATOR . $view . '.php';
        $content = ob_get_clean();
        require $this->viewPath . DIRECTORY_SEPARATOR . 'layouts/default.php';
-
        return $this;
     }
 }

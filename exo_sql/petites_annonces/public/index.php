@@ -18,7 +18,8 @@ $whoops->register();
 
 $router = new Router(dirname(__DIR__) . '/views');
 $router
-    ->get('/projet', 'post/index', 'projet')
+    ->get('/', 'post/index', 'home')
+    ->get('/projet/[*:slug]-[i:id]', 'post/show','post')
     ->get('/projet/category', 'category/show', 'category')
     ->run();
 ?>
