@@ -44,6 +44,11 @@ https://www.grafikart.fr/tutoriels/tp-php-listing-article-1165
 
 ------------------------
 
+Pagination:
+https://www.grafikart.fr/tutoriels/tp-php-pagination-1166
+
+------------------------
+
 */
 
 ?>
