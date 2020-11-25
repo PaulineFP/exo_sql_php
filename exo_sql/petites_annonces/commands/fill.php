@@ -1,12 +1,11 @@
 <?php
+use App\Connection;
 
 require dirname(__DIR__) . '/vendor/autoload.php';
 
 $faker = Faker\Factory::create('fr_FR');
 
-$pdo = new PDO('mysql:dbname=projetPA;host=127.0.0.1', 'root', 'toortoor', [
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-]);
+$pdo = Connection::getPDO();
 
 /* Je remplis ma base de données avec des données de tests et vu que je vais créer un script que
 je pourrais appeler pour remplir instantanément la base avec des dixaines de contenus.*/

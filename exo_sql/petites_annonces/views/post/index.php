@@ -1,15 +1,17 @@
 <?php
 use App\Router;
-
 use App\Helpers\Text;
 use App\Model\Post;
+use App\Connection;
+use App\URL;
 
 
 $title = 'Mon projet';
 
-$pdo = new PDO('mysql:dbname=projetPA;host=127.0.0.1', 'root', 'toortoor', [
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-]);
+$pdo = Connection::getPDO();
+
+$currentPage = URL::getPositiveInt('page', 1);
+
 
 /* Pour mettre en place la pagination. Il va falloir calculer les variables suivantes :
 
@@ -19,23 +21,7 @@ $pdo = new PDO('mysql:dbname=projetPA;host=127.0.0.1', 'root', 'toortoor', [
 
 Il suffit ensuite de jouer avec le paramètre OFFSET afin d'afficher les articles correspondant à une certaine page. */
 
-$page = ($_GET['page'] ?? 1);
-//pour filtrer l'url.
-if (!filter_var($page, FILTER_VALIDATE_INT)){
-    throw new Exception('Numéro de page invalide');
-}
 
-if($page === '1'){
-    header('Location:' . $router->url('home'));
-    http_response_code(301);
-    exit();
-}
-
-$currentPage = (int)$page;
-
-if ($currentPage <= 0){
-    throw new Exception('Numéro de page invalide');
-}
 $count= (int)$pdo->query("SELECT COUNT(id) FROM post")->fetch(PDO::FETCH_NUM)[0];
 
 $perPage = 12;

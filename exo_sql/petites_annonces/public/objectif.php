@@ -48,6 +48,10 @@ Pagination:
 https://www.grafikart.fr/tutoriels/tp-php-pagination-1166
 
 ------------------------
+simplifions la gestion de l'url:
+https://www.grafikart.fr/tutoriels/tp-php-request-1167
+
+-----------------------
 
 */
 
