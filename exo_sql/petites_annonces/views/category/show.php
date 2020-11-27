@@ -83,7 +83,3 @@ $title = "Catégorie {$category->getName()}";
         <a href="<?= $link ?>?page=<?= ($currentPage +1 )?>" class="btn btn-primary ml-auto">Page suivante &raquo;</a>
     <?php endif;?>
 </div>
-
-<!--https://www.grafikart.fr/tutoriels/tp-page-categorie-php-1169
-
-6:42-->
