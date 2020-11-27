@@ -44,8 +44,8 @@ if(isset($_GET['page']) && $_GET['page'] === '1') {
 $router = new Router(dirname(__DIR__) . '/views');
 $router
     ->get('/', 'post/index', 'home')
+    ->get('/projet/category[*:slug]-[i:id]', 'category/show', 'category')
     ->get('/projet/[*:slug]-[i:id]', 'post/show','post')
-    ->get('/projet/category', 'category/show', 'category')
     ->run();
 ?>
 

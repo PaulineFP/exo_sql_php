@@ -37,6 +37,7 @@ class Router{
        $match = $this->router->match();
         //je recupere la fonction tamplate
        $view = $match['target'];
+       $params = $match['params'];
        $router = $this;
        ob_start();
        require $this->viewPath . DIRECTORY_SEPARATOR . $view . '.php';

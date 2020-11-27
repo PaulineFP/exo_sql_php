@@ -53,6 +53,10 @@ https://www.grafikart.fr/tutoriels/tp-php-request-1167
 
 -----------------------
 
+Page article:
+https://www.grafikart.fr/tutoriels/tp-page-article-php-1168
+-----------------------
+
 */
 
 ?>

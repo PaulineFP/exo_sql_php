@@ -5,13 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64cc342f-2e5d-4713-bc51-efab2476f729" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Connection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/URL.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Category.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/post/show.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commands/fill.php" beforeDir="false" afterPath="$PROJECT_DIR$/commands/fill.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/objectif.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/objectif.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/post/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/post/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +66,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\HTML_CSS cours_exo\exercicephp\exo_sql\petites_annonces\src" />
       <recent name="C:\xampp\htdocs\HTML_CSS cours_exo\exercicephp\exo_sql\petites_annonces\public" />
     </key>
   </component>
@@ -81,45 +87,12 @@
       <workItem from="1606207683187" duration="14539000" />
       <workItem from="1606293581058" duration="739000" />
       <workItem from="1606307898378" duration="1686000" />
-      <workItem from="1606311641859" duration="1135000" />
+      <workItem from="1606311641859" duration="2368000" />
+      <workItem from="1606465252948" duration="15002000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="426" y="108" key="#Inspections" timestamp="1605714177616">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="426" y="108" key="#Inspections/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1605714177616" />
-    <state x="176" y="271" key="#SQL_Dialects" timestamp="1605861943381">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="176" y="271" key="#SQL_Dialects/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1605861943381" />
-    <state x="240" y="286" key="#SQL_Resolution_Scopes" timestamp="1605862650964">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="240" y="286" key="#SQL_Resolution_Scopes/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1605862650964" />
-    <state x="392" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605862593873">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="392" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1605862593873" />
-    <state x="547" y="274" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1605714635258">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="547" y="274" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1605714635258" />
-    <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1605798633893">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1605798633893" />
-    <state x="634" y="353" key="NewPhpFileDialog" timestamp="1606232420344">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="634" y="353" key="NewPhpFileDialog/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1606232420344" />
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1606147001327">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1606147001327" />
   </component>
 </project>
