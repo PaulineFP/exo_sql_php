@@ -63,6 +63,11 @@ https://www.grafikart.fr/tutoriels/tp-page-categorie-php-1169
 
 -------------------------
 
+Réorganisation de la pagination:
+https://www.grafikart.fr/tutoriels/tp-pagination-refactor-php-1170
+
+-------------------------
+
 */
 
 ?>

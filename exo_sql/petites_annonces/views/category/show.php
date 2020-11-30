@@ -27,6 +27,31 @@ if($category->getSlug() !== $slug){
     http_response_code(301);
     header('Location:' . $url);
 }
+/**
+ * je regarde ce qui change entre 2 pages afin d'identifier les parmamètres:
+ *
+ * Paramètres qui varient:
+ *
+ * $sqlListing
+ * $classMapping
+ * $sqlCount
+ * $perPage
+ *
+ * Paramètres  extèrnes (dont dépend la méthode pour fonctionner):
+ *
+ * //$currentPage (pas nécéssaire car il peut le trouvé tout seul dans l'url)
+ * $pdo
+ *
+ * Methode dont j'ai besoin (qui permet de récuperer les résultats comme les articles pour le listing:
+ *
+ * getIthems(): array
+ * previousPageLink(): ?string
+ * nextPageLink(): ?string
+ *
+ */
+
+
+
 
 $currentPage = URL::getPositiveInt('page', 1);
 
