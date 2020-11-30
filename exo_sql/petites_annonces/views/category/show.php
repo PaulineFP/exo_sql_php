@@ -28,19 +28,13 @@ if($category->getSlug() !== $slug){
     header('Location:' . $url);
 }
 /**
- * je regarde ce qui change entre 2 pages afin d'identifier les parmamètres:
- *
  * Paramètres qui varient:
  *
- * $sqlListing
- * $classMapping
- * $sqlCount
- * $perPage
- *
- * Paramètres  extèrnes (dont dépend la méthode pour fonctionner):
- *
- * //$currentPage (pas nécéssaire car il peut le trouvé tout seul dans l'url)
- * $pdo
+ * $sqlListing: string
+ * $classMapping: string
+ * $sqlCount: string
+ * $pdo: PDO = Connection::getPDO()
+ * $perPage: int = 12
  *
  * Methode dont j'ai besoin (qui permet de récuperer les résultats comme les articles pour le listing:
  *
