@@ -26,15 +26,31 @@ if($category->getSlug() !== $slug){
 }
 
 $paginatedQuery = new \App\PaginatedQuery(
-"SELECT p.*
+    "SELECT p.*
             FROM post p
             JOIN post_category pc ON pc.post_id = p.id
             WHERE pc.category_id = {$category->getID()}
             ORDER BY created_at DESC",
-       "SELECT COUNT(category_id) FROM post_category WHERE category_id = {$category->getID()}"
+"SELECT COUNT(category_id) FROM post_category WHERE category_id = {$category->getID()}"
 );
 /** @var Post[]*/
 $posts = $paginatedQuery->getItems(Post::class);
+
+$postsByID = [];
+foreach ( $posts as $post){
+    $postsByID [$post->getID()] = $post;
+    $ids[] = $post->getID();
+}
+$categories = $pdo->query('SELECT  c.*, pc.post_id
+                        FROM post_category pc
+                        JOIN category c ON c.id = pc.category_id
+                      
+                        WHERE pc.post_id IN ('. implode(',', array_keys($postsByID)) . ')')
+    ->fetchAll(PDO::FETCH_CLASS,Category::Class);
+
+foreach ($categories as $category){
+    $postsByID[$category->getPostID()]->addCategory($category);
+}
 
 $link = $router->url('category', ['id'=> $category->getID(), 'slug' => $category->getSlug()]);
 

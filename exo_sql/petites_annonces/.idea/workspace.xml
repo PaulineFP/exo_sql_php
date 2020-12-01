@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64cc342f-2e5d-4713-bc51-efab2476f729" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/PaginatedQuery.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/objectif.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/objectif.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/category/show.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/category/show.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layouts/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/post/card.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/post/card.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/post/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/post/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +84,8 @@
       <workItem from="1606307898378" duration="1686000" />
       <workItem from="1606311641859" duration="2368000" />
       <workItem from="1606465252948" duration="19620000" />
-      <workItem from="1606724924661" duration="20140000" />
+      <workItem from="1606724924661" duration="20583000" />
+      <workItem from="1606812667311" duration="10844000" />
     </task>
     <servers />
   </component>
