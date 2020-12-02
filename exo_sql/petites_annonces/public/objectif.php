@@ -1,5 +1,4 @@
-<?php
-/*Projet - petites annonces
+Projet - petites annonces
 
 
 - Il doit permettre de :
@@ -67,11 +66,14 @@ Réorganisation de la pagination:
 https://www.grafikart.fr/tutoriels/tp-pagination-refactor-php-1170
 
 -------------------------
+
 Affichage des catégories sur le listing:
 https://www.grafikart.fr/tutoriels/tp-categorie-listing-php-1187
 
 -------------------------
 
-*/
+Création de la classe Table
+https://www.grafikart.fr/tutoriels/tp-table-class-php-1188
 
-?>
+--------------------------
+
