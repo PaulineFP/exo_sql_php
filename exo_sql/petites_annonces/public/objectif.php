@@ -77,3 +77,7 @@ https://www.grafikart.fr/tutoriels/tp-table-class-php-1188
 
 --------------------------
 
+Administration du site:
+https://www.grafikart.fr/tutoriels/tp-backend-php-1189
+
+-------------------------
