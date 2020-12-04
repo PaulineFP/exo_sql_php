@@ -5,16 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64cc342f-2e5d-4713-bc51-efab2476f729" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Auth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/post/delete.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/post/edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/post/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/post/new.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Validator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/petites_annonces.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/petites_annonces.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/objectif.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/objectif.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Router.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Table/PostTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Table/PostTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/post/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/post/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/post/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/post/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +44,7 @@
       <path value="$PROJECT_DIR$/vendor/psr/log" />
       <path value="$PROJECT_DIR$/vendor/filp/whoops" />
       <path value="$PROJECT_DIR$/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/valitron" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kPUv7keUrxbbGKZefl3aR3Rbtm" />
@@ -91,7 +98,8 @@
       <workItem from="1606724924661" duration="20583000" />
       <workItem from="1606812667311" duration="12884000" />
       <workItem from="1606897860603" duration="17626000" />
-      <workItem from="1606984873013" duration="9746000" />
+      <workItem from="1606984873013" duration="17164000" />
+      <workItem from="1607071428128" duration="10770000" />
     </task>
     <servers />
   </component>

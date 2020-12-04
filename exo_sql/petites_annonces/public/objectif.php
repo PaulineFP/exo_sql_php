@@ -81,3 +81,8 @@ Administration du site:
 https://www.grafikart.fr/tutoriels/tp-backend-php-1189
 
 -------------------------
+
+Edition d'un article:
+https://www.grafikart.fr/tutoriels/tp-backend-php-edit-1190
+
+-------------------------

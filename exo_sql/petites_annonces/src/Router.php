@@ -29,10 +29,14 @@ class Router{
     public function post(string $url, string $view, ?string $name = null): self
     {
         $this->router->map('POST', $url, $view, $name);
-        //je renvoie l'obj en cours pour pas redéfinir la variable
         return $this;
     }
 
+    public function match(string $url, string $view, ?string $name = null): self
+    {
+        $this->router->map('POST|GET', $url, $view, $name);
+        return $this;
+    }
 
     public function url (string $name, array $params =[])
     {
