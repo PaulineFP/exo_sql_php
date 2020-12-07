@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64cc342f-2e5d-4713-bc51-efab2476f729" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/HTML/Form.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Validators/AbstractValidator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Validators/PostValidator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/objectif.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/objectif.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Table/PostTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Table/PostTable.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/admin/post/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/post/edit.php" afterDir="false" />
     </list>
@@ -90,7 +90,7 @@
       <workItem from="1606897860603" duration="17626000" />
       <workItem from="1606984873013" duration="17164000" />
       <workItem from="1607071428128" duration="15938000" />
-      <workItem from="1607329122413" duration="8783000" />
+      <workItem from="1607329122413" duration="16640000" />
     </task>
     <servers />
   </component>

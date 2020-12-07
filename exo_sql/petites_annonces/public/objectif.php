@@ -91,3 +91,8 @@ Gestion des formulaires:
 https://www.grafikart.fr/tutoriels/tp-backend-php-form-1191
 
 -------------------------
+
+Valider les données:
+https://www.grafikart.fr/tutoriels/tp-backend-php-validator-1192
+
+-------------------------
