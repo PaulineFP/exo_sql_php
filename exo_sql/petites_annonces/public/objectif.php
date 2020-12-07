@@ -86,3 +86,8 @@ Edition d'un article:
 https://www.grafikart.fr/tutoriels/tp-backend-php-edit-1190
 
 -------------------------
+
+Gestion des formulaires:
+https://www.grafikart.fr/tutoriels/tp-backend-php-form-1191
+
+-------------------------
