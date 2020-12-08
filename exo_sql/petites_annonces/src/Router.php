@@ -11,6 +11,8 @@ class Router{
     //la fonction si dessous a besoin d'altorouteur pour fonctionner, je lui crée une variable.
     private $router;
 
+    public $layout = "layouts/default";
+
     public function __construct(string $viewPath)
     {
         $this->viewPath = $viewPath;
@@ -51,11 +53,14 @@ class Router{
        $view = $match['target'] ?? null;
        $params = $match['params'] ?? null;
        $router = $this;
+       //je vérifie si on est bien dans l'administrateur. Dans le cas contraire je redirige.
+       $isAdmin = strpos($view, 'admin/') !== false;
+       $layout = $isAdmin ? 'admin/layouts/default' :  'layouts/default';
        ob_start();
 
        require $this->viewPath . DIRECTORY_SEPARATOR . $view . '.php';
        $content = ob_get_clean();
-       require $this->viewPath . DIRECTORY_SEPARATOR . 'layouts/default.php';
+       require $this->viewPath . DIRECTORY_SEPARATOR . $layout . '.php';
        return $this;
     }
 }

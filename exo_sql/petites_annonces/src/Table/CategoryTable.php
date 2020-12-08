@@ -2,11 +2,11 @@
 namespace App\Table;
 
 use App\Model\Category;
+use App\PaginatedQuery;
 use \PDO;
 
  final class CategoryTable extends TableParent {
 
-    // Je rappelle mes valeurs protégé de la table Parent.
     protected $table = "category";
     protected $class = Category::class;
 
@@ -38,7 +38,10 @@ use \PDO;
     foreach ($categories as $category){
             $postsByID[$category->getPostID()]->addCategory($category);
         }
-
     }
 
-}
+     public function all (): array
+     {
+        return $this->queryAndFetchAll("SELECT * FROM {$this->table} ORDER BY id DESC ");
+     }
+ }

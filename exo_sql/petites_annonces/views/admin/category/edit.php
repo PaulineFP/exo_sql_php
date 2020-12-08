@@ -1,62 +1,62 @@
 <?php
 use App\Connection;
-use App\Table\PostTable;
+use App\Table\CategoryTable;
 use App\HTML\Form;
-use App\Validators\PostValidator;
+use App\Validators\CategoryValidator;
 use App\ObjectHelper;
 use App\Auth;
 
 Auth::check();
 
 
-
 $pdo = Connection::getPDO();
-$postTable = new PostTable($pdo);
-$post = $postTable->find($params['id']);
+$table = new CategoryTable($pdo);
+$item = $table->find($params['id']);
 $success = false;
-
 $errors = [];
+$fields = ['name', 'slug'];
 
 if (!empty($_POST)) {
-    $v = new PostValidator($_POST, $postTable, $post->getID());
-    ObjectHelper::hydrate($post, $_POST, ['name', 'content', 'slug', 'created_at']);
+    $v = new CategoryValidator($_POST, $table, $item->getID());
+    ObjectHelper::hydrate($item, $_POST, $fields);
 
     if ($v->validate()){
-        $postTable->updatePost($post);
+        $table->update([
+                'name' => $item->getName(),
+                'slug' => $item->getSlug()
+        ], $item->getID());
         $success = true;
     } else{
        $errors = $v->errors();
     }
 }
 
-$form = new Form($post, $errors)
+$form = new Form($item, $errors)
 
 ?>
 
 <?php if ($success): ?>
 <div class="alert alert-success">
-    L'article <?= $post->getName() ?> à bien été modifié
+    La catégorie à bien été modifiée
 </div>
 <?php endif ?>
 
 <?php if (isset($_GET['created'])): ?>
     <div class="alert alert-success">
-        L'article <?= $post->getName() ?> à bien été Crée
+        La catégorie à bien été Crée
     </div>
 <?php endif ?>
 
 <?php if (!empty($errors)): ?>
 <div class="alert alert-danger">
-    L'article n'a pas pus être modifié, merci de corriger vos erreurs
+    La catégorie n'a pas pus être modifiée, merci de corriger vos erreurs
 </div>
 <?php endif ?>
 
-<h1>Editer l'article <?= e($post->getName()) ?></h1>
+<h1>Editer la catégorie <?= e($item->getName()) ?></h1>
 
 <form action="" method="POST">
     <?= $form->input('name', 'Titre'); ?>
     <?= $form->input('slug', 'URL'); ?>
-    <?= $form->textarea('content', 'Contenu'); ?>
-    <?= $form->input('created_at', 'Date de publication'); ?>
     <button class="btn btn-primary">Modifier</button>
 </form>

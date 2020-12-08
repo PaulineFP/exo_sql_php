@@ -101,3 +101,8 @@ Création d'un article:
 https://www.grafikart.fr/tutoriels/tp-backend-php-create-1193
 
 --------------------------
+
+Gestion des catégories:
+https://www.grafikart.fr/tutoriels/tp-backend-php-categories-1194
+
+-------------------------

@@ -5,6 +5,7 @@ use App\Auth;
 
 Auth::check();
 
+$router->layout = "admin/layouts/default";
 $title = "Administration";
 $pdo = Connection::getPDO();
 [$posts, $pagination ]= (new PostTable($pdo))->findPaginated();
