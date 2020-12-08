@@ -40,7 +40,7 @@ HTML;
 
     }
 
-     public function getValue(string $key): ?string
+     public function getValue (string $key): ?string
     {
 
         if (is_array($this->data)){

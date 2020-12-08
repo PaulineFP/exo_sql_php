@@ -48,10 +48,11 @@ class Router{
     {
        $match = $this->router->match();
         //je recupere la fonction tamplate
-       $view = $match['target'];
-       $params = $match['params'];
+       $view = $match['target'] ?? null;
+       $params = $match['params'] ?? null;
        $router = $this;
        ob_start();
+
        require $this->viewPath . DIRECTORY_SEPARATOR . $view . '.php';
        $content = ob_get_clean();
        require $this->viewPath . DIRECTORY_SEPARATOR . 'layouts/default.php';

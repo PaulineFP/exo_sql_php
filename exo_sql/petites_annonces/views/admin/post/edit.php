@@ -1,9 +1,9 @@
 <?php
 use App\Connection;
 use App\Table\PostTable;
-use App\Validator;
 use App\HTML\Form;
 use App\Validators\PostValidator;
+use App\ObjectHelper;
 
 
 
@@ -16,14 +16,8 @@ $success = false;
 $errors = [];
 
 if (!empty($_POST)) {
-    Validator::lang('fr');
     $v = new PostValidator($_POST, $postTable, $post->getID());
-
-    $post
-        ->setName($_POST['name'])
-        ->setContent($_POST['content'])
-        ->setSlug($_POST['slug'])
-        ->setCreatedAt($_POST['created_at']);
+    ObjectHelper::hydrate($post, $_POST, ['name', 'content', 'slug', 'created_at']);
 
     if ($v->validate()){
         $postTable->update($post);
@@ -41,6 +35,12 @@ $form = new Form($post, $errors)
 <div class="alert alert-success">
     L'article <?= $post->getName() ?> à bien été modifié
 </div>
+<?php endif ?>
+
+<?php if (isset($_GET['created'])): ?>
+    <div class="alert alert-success">
+        L'article <?= $post->getName() ?> à bien été Crée
+    </div>
 <?php endif ?>
 
 <?php if (!empty($errors)): ?>

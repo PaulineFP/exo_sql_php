@@ -96,3 +96,8 @@ Valider les données:
 https://www.grafikart.fr/tutoriels/tp-backend-php-validator-1192
 
 -------------------------
+
+Création d'un article:
+https://www.grafikart.fr/tutoriels/tp-backend-php-create-1193
+
+--------------------------

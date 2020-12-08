@@ -90,6 +90,12 @@ class Post {
         return $this->id;
     }
 
+    public function setID (int $id): self
+    {
+        $this->id = $id;
+        return $this;
+    }
+
     /** @return Category[] */
     public function getCategories (): array
     {

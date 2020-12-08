@@ -23,8 +23,22 @@ final class PostTable extends TableParent {
             'created_at' => $post->getCreatedAt()->format('Y-m-d H:i')
         ]);
         if($ok === false){
-            throw new \Exception("Impossible de supprimer l'enregistrement $id dans la table {$this->table}");
+            throw new \Exception("Impossible de modifier l'enregistrement $id dans la table {$this->table}");
         }
+    }
+    public function create(Post $post): void
+    {
+        $query = $this->pdo->prepare("INSERT INTO {$this->table} SET name =  :name, slug = :slug, created_at = :created_at, content = :content ");
+        $ok = $query->execute([
+            'name' => $post->getName(),
+            'slug' => $post->getSlug(),
+            'content' => $post->getContent(),
+            'created_at' => $post->getCreatedAt()->format('Y-m-d H:i')
+        ]);
+        if($ok === false){
+            throw new \Exception("Impossible de crée l'enregistrement $id dans la table {$this->table}");
+        }
+        $post->setID($this->pdo->lastInsertId());
     }
 
     public function delete (int $id): void
