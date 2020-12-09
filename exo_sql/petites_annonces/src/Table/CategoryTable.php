@@ -10,6 +10,9 @@ use \PDO;
     protected $table = "category";
     protected $class = Category::class;
 
+
+
+
     /**
     * @param App\Model\Post[] $posts
      */
@@ -18,6 +21,8 @@ use \PDO;
     //Je crée le tableau des articles indexer par les id et je remplis par les catégories:
     $postsByID = [];
     foreach ( $posts as $post){
+        //initialise à chaque hydratation
+        $post->setCategories([]);
         $postsByID [$post->getID()] = $post;
         $ids[] = $post->getID();
     }
@@ -40,8 +45,21 @@ use \PDO;
         }
     }
 
-     public function all (): array
+    public function all (): array
      {
         return $this->queryAndFetchAll("SELECT * FROM {$this->table} ORDER BY id DESC ");
      }
+
+   public function list(): array
+   {
+       $categories = $this->queryAndFetchAll("SELECT * FROM {$this->table} ORDER BY name ASC");
+       $results = [];
+       foreach ($categories as $category){
+           $results[$category->getID()] = $category->getName();
+       }
+       return $results;
+
+   }
+
+
  }

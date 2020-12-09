@@ -40,7 +40,26 @@ HTML;
 
     }
 
-     public function getValue (string $key): ?string
+    public function select (string $key, string $label, array $options = []): string
+    {
+        $optionsHTML = [];
+        $value = $this->getValue($key);
+        foreach ($options as $k => $v){
+            //je cherche si $k est bien dans $value. Si c'est définie je rajoute l'attribu selected si non aucun
+            $selected = in_array($k, $value) ? " selected" : "";
+            $optionsHTML[] = "<option value = \"$k\"$selected>$v</option>";
+        }
+        $optionsHTML = implode('', $optionsHTML);
+        return  <<<HTML
+            <div class="form-group">
+                <label for="field{$key}">{$label}</label>
+                 <select id="field{$key}" class="{$this->getInputClass($key)}" name="{$key}[]" required multiple>{$optionsHTML}</select>
+                 {$this->getErrorFeedback($key)}
+            </div>
+HTML;
+    }
+
+     public function getValue (string $key)
     {
 
         if (is_array($this->data)){

@@ -5,23 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64cc342f-2e5d-4713-bc51-efab2476f729" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Validators/CategoryValidator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/category/_form.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/category/delete.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/category/edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/category/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/category/new.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/layouts/default.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/objectif.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/objectif.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HTML/Form.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/Form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Table/CategoryTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Table/CategoryTable.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Table/PostTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Table/PostTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Table/TableParent.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Table/TableParent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Validator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Validator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Validators/PostValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Validators/PostValidator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/post/_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/post/_form.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/admin/post/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/post/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin/post/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/post/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/admin/post/new.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/post/new.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +100,8 @@
       <workItem from="1606984873013" duration="17164000" />
       <workItem from="1607071428128" duration="15938000" />
       <workItem from="1607329122413" duration="21035000" />
-      <workItem from="1607414524234" duration="18254000" />
+      <workItem from="1607414524234" duration="19243000" />
+      <workItem from="1607502170638" duration="11934000" />
     </task>
     <servers />
   </component>

@@ -106,3 +106,8 @@ Gestion des catégories:
 https://www.grafikart.fr/tutoriels/tp-backend-php-categories-1194
 
 -------------------------
+
+Liaison article catégorie:
+https://www.grafikart.fr/tutoriels/tp-backend-php-liaison-1195
+
+-------------------------
