@@ -13,13 +13,17 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a href="#" class="navbar-brand" >Mon projet</a>
     <ul class="navbar-nav">
-        <li class="nav-ithem">
+        <li class="nav-item">
             <a href="<?= $router->url('admin_posts')?>" class="nav-link">Articles</a>
         </li>
-        <li class="nav-ithem">
+        <li class="nav-item">
             <a href="<?= $router->url('admin_categories')?>" class="nav-link">Categories</a>
         </li>
-
+        <li class="nav-item">
+            <form action="<?= $router->url('logout')?>" method="post" style="display:inline">
+                <button type="submit" class="nav-link" style="background:transparent; border:none;">Se déconnecter</button>
+            </form>
+        </li>
     </ul>
 
 </nav>

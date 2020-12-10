@@ -3,6 +3,8 @@
 //je met ma classe dans un namespace particulier pour evité de la mélanger avec d'autre apli.
 namespace App;
 use AltoRouter;
+use App\Security\ForbiddenException;
+
 class Router{
 
     //pour pouvoir  acceder a ma varaible 'viewpath' dans les autres methodes, je crée une porpriété de type chaine de caractere 'string'.
@@ -50,18 +52,23 @@ class Router{
     {
        $match = $this->router->match();
         //je recupere la fonction tamplate
-       $view = $match['target'] ?? null;
+       $view = $match['target'] ?? 'e404';
        $params = $match['params'] ?? null;
        $router = $this;
        //je vérifie si on est bien dans l'administrateur. Dans le cas contraire je redirige.
        $isAdmin = strpos($view, 'admin/') !== false;
        $layout = $isAdmin ? 'admin/layouts/default' :  'layouts/default';
-       ob_start();
+        try{
+            ob_start();
+            require $this->viewPath . DIRECTORY_SEPARATOR . $view . '.php';
+            $content = ob_get_clean();
+            require $this->viewPath . DIRECTORY_SEPARATOR . $layout . '.php';
+            return $this;
+        } catch (ForbiddenException $e) {
+            header('Location:' . $this->url('login') . '?forbidden=1');
+            exit();
+        }
 
-       require $this->viewPath . DIRECTORY_SEPARATOR . $view . '.php';
-       $content = ob_get_clean();
-       require $this->viewPath . DIRECTORY_SEPARATOR . $layout . '.php';
-       return $this;
     }
 }
 

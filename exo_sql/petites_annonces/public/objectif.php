@@ -111,3 +111,8 @@ Liaison article catégorie:
 https://www.grafikart.fr/tutoriels/tp-backend-php-liaison-1195
 
 -------------------------
+
+Authentification:
+https://www.grafikart.fr/tutoriels/tp-backend-php-auth-1196
+
+------------------------------------------------------------------------------------------------------------------------

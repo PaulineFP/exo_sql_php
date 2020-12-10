@@ -46,6 +46,8 @@ $router
     ->get('/', 'post/index', 'home')
     ->get('/projet/category[*:slug]-[i:id]', 'category/show', 'category')
     ->get('/projet/[*:slug]-[i:id]', 'post/show','post')
+    ->match('/login', 'auth/login', 'login')
+    ->post('/logout', 'auth/logout', 'logout')
 
     //ADMIN
         //Gestion des articles

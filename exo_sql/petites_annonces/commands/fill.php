@@ -47,4 +47,3 @@ foreach ($posts as $post) {
 $password = password_hash('admin', PASSWORD_BCRYPT);
 $pdo->exec("INSERT INTO user SET username='admin' , lastname='admin' , telephone='0680543971' , mail='ggggg@gmail.com' , password='$password'");
 
-//Ce code permet de créer 30 articles et 8 catégories en une seule fois.
